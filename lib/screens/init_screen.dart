@@ -14,8 +14,17 @@ class InitScreen extends StatelessWidget {
         body: Padding(
             padding: EdgeInsets.all(60.0),
             child: Center(
-              child: Text(
-                  'Morgen will ich sagen genau so wie jetzt : ich über hetue auch wie ich gestern gemacht habe.'),
+              child: Column(
+                children: [
+                  Text(
+                      'Morgen will ich sagen genau so wie jetzt : ich über hetue auch wie ich gestern gemacht habe.'),
+                  ElevatedButton(
+                    key: Key('navigateToCounterScreen'),
+                    onPressed: () => Navigator.pushNamed(context, '/counter'),
+                    child: Text('Go to CounterScreen'),
+                  )
+                ],
+              ),
             )));
   }
 }
